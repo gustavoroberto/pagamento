@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111010114438) do
+ActiveRecord::Schema.define(:version => 20111010145917) do
+
+  create_table "fornecedores", :force => true do |t|
+    t.string   "cnpj_cpf"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "nome"
+  end
 
   create_table "usuarios", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -30,4 +37,5 @@ ActiveRecord::Schema.define(:version => 20111010114438) do
 
   add_index "usuarios", ["email"], :name => "index_usuarios_on_email", :unique => true
   add_index "usuarios", ["reset_password_token"], :name => "index_usuarios_on_reset_password_token", :unique => true
+
 end
