@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class FornecedoresController < ApplicationController
+  before_filter :authenticate_usuario!, except: [:index]
+
   # GET /fornecedores
   def index
     @fornecedores = Fornecedor.all
