@@ -11,7 +11,6 @@ gem 'devise'
 
 gem 'pg', group: :production
 
-
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
@@ -19,4 +18,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'therubyracer', group: [:development, :test]
+
+group :development, :test do
+  gem 'therubyracer'
+  gem 'rspec-rails'
+end
