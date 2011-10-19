@@ -4,6 +4,7 @@
   <tr>
     <th>Nome</th>
     <th>CNPJ/CPF</th>
+    <th>Pessoa jurídica</th>
     <th></th>
     <th></th>
   </tr>
@@ -11,12 +12,8 @@
 <% @fornecedores.each do |fornecedor| %>
   <tr>
     <td><%= fornecedor.nome %></td>
-
-    <% if fornecedor.pj? %>
-      <td><%= fornecedor.cnpj %></td>
-    <% else %>
-      <td><%= fornecedor.cpf %></td>
-    <% end %>
+    <td><%= fornecedor.pj? ? fornecedor.cnpj : fornecedor.cpf %></td>
+    <td><%= fornecedor.pj? ? 'Sim' : 'Não' %></td>
 
     <% if usuario_signed_in? %>
       <td><%= link_to 'Editar', edit_fornecedor_path(fornecedor) %></td>
