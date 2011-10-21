@@ -24,6 +24,7 @@
   <%= @conformidade.fornecedor.nome %>
 </p>
 
-
-<%= link_to 'Editar', edit_conformidade_path(@conformidade) %> |
+<% if usuario_signed_in? %>
+  <%= link_to 'Editar', edit_conformidade_path(@conformidade) %> |
+<% end %>
 <%= link_to 'Voltar', conformidades_path %>
