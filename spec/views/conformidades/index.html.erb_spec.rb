@@ -5,11 +5,11 @@ describe "conformidades/index.html.erb" do
     assign(:conformidades, [
       stub_model(Conformidade,
         :caixa => "Caixa",
-        :precesso => "Precesso"
+        :processo => "Processo"
       ),
       stub_model(Conformidade,
         :caixa => "Caixa",
-        :precesso => "Precesso"
+        :processo => "Processo"
       )
     ])
   end
