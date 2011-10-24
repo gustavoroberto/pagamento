@@ -5,6 +5,7 @@
     <th>Nome</th>
     <th>CNPJ/CPF</th>
     <th>Pessoa jurídica</th>
+    <th>Publicado</th>
     <th></th>
     <th></th>
   </tr>
@@ -14,6 +15,7 @@
     <td><%= fornecedor.nome %></td>
     <td><%= fornecedor.pj? ? fornecedor.cnpj : fornecedor.cpf %></td>
     <td><%= fornecedor.pj? ? 'Sim' : 'Não' %></td>
+    <td><%= fornecedor.publicado? ? 'Sim' : 'Não' %></td>
 
     <% if usuario_signed_in? %>
       <td><%= link_to 'Editar', edit_fornecedor_path(fornecedor) %></td>
