@@ -2,8 +2,10 @@ Pagamento::Application.routes.draw do
   resources :conformidades
 
   resources :fornecedores
-
+  
   devise_for :usuarios
+  
+  resources :usuarios
 
   root :to => 'conformidades#index'
 
