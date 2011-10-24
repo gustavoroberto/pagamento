@@ -8,7 +8,7 @@ class Fornecedor < ActiveRecord::Base
   validates :nome, presence: true
   validates :cnpj, presence: true, if: :pj?
   validates :cpf, presence: true, unless: :pj?
-
+  validades_uniqueness_of :cnpj, :cpf
   usar_como_cpf :cpf
   usar_como_cnpj :cnpj
   validate :cpf_ou_cnpj
