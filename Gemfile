@@ -9,6 +9,7 @@ end
 
 gem 'devise'
 gem 'brazilian-rails'
+gem 'kaminari'
 
 gem 'pg', group: :production
 

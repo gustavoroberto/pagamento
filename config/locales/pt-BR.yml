@@ -237,3 +237,9 @@
 
       full_messages:
         format: "%{attribute} %{message}"
+  views:
+    pagination:
+      next: 'Próximo'
+      previous: 'Anterior'
+      first: 'Primeira'
+      last: 'Última'
