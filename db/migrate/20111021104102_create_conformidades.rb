@@ -5,7 +5,7 @@ class CreateConformidades < ActiveRecord::Migration
       t.string :processo
       t.date :data
       t.text :observacao
-      t.decimal :valor, precision: 2, scale: 9
+      t.decimal :valor, precision: 9, scale: 2
       t.integer :fornecedor_id
 
       t.timestamps

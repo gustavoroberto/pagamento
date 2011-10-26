@@ -5,6 +5,9 @@
   <%= stylesheet_link_tag    "application", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <!--[if (gte IE 6)&(lte IE 8)]>
+	  <%= javascript_include_tag "http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.4-min.js", "selectivizr" %>
+	<![endif]-->
 </head>
 <body>
 
